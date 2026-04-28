@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="#F0F4FF">
+    <!--  Top App Bar  -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="#1565C0" android:padding="14dp" android:gravity="center_vertical">
+        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/backarrow" android:layout_marginEnd="12dp"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Savings Goals" android:textColor="#FFFFFF" android:textSize="18sp" android:textStyle="bold" android:gravity="center"/>
+        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/menu"/>
+    </LinearLayout>
+    <!--  Goals List  -->
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:padding="16dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <!--  Goal Card: iPhone 13  -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="#FFFFFF" android:padding="16dp" android:layout_marginBottom="14dp" android:elevation="3dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="8dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="iPhone 13" android:textSize="17sp" android:textStyle="bold" android:textColor="#1A1A1A" android:layout_marginBottom="4dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="R0 / R25,000" android:textSize="14sp" android:textColor="#555555"/>
+                    </LinearLayout>
+                    <ImageView android:layout_width="60dp" android:layout_height="70dp" android:src="@drawable/iphone" android:scaleType="fitCenter"/>
+                </LinearLayout>
+                <ProgressBar style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="8dp" android:progress="0" android:progressTint="#4CAF50" android:progressBackgroundTint="#E0E0E0"/>
+            </LinearLayout>
+            <!--  Goal Card: New Laptop  -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="#FFFFFF" android:padding="16dp" android:layout_marginBottom="14dp" android:elevation="3dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="8dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="New Laptop" android:textSize="17sp" android:textStyle="bold" android:textColor="#1A1A1A" android:layout_marginBottom="4dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="R600 / R15,000" android:textSize="14sp" android:textColor="#555555"/>
+                    </LinearLayout>
+                    <ImageView android:layout_width="64dp" android:layout_height="56dp" android:src="@drawable/laptop" android:scaleType="fitCenter"/>
+                </LinearLayout>
+                <ProgressBar style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="8dp" android:progress="4" android:progressTint="#4CAF50" android:progressBackgroundTint="#E0E0E0"/>
+            </LinearLayout>
+            <!--  Goal Card: Vacation Fund  -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="#FFFFFF" android:padding="16dp" android:layout_marginBottom="14dp" android:elevation="3dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="8dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Vacation Fund" android:textSize="17sp" android:textStyle="bold" android:textColor="#1A1A1A" android:layout_marginBottom="4dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="R2,500 / R15,000" android:textSize="14sp" android:textColor="#555555"/>
+                    </LinearLayout>
+                    <ImageView android:layout_width="64dp" android:layout_height="56dp" android:src="@drawable/vacation" android:scaleType="fitCenter"/>
+                </LinearLayout>
+                <ProgressBar style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="8dp" android:progress="17" android:progressTint="#4CAF50" android:progressBackgroundTint="#E0E0E0"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <!--  Create New Goal Button  -->
+    <Button android:id="@+id/btnCreateNewGoal" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Create New Goal" android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold" android:backgroundTint="#1565C0" android:padding="16dp" android:layout_margin="16dp"/>
+</LinearLayout>

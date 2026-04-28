@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="#F0F4FF">
+    <!--  Top App Bar  -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="#1565C0" android:padding="14dp" android:gravity="center_vertical">
+        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/arrow" android:layout_marginEnd="12dp"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Reports" android:textColor="#FFFFFF" android:textSize="18sp" android:textStyle="bold" android:gravity="center"/>
+        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/menu"/>
+    </LinearLayout>
+    <!--  Scrollable Content  -->
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+            <!--  Spending Summary Title  -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Spending Summary" android:textSize="18sp" android:textStyle="bold" android:textColor="#1A1A1A" android:layout_marginBottom="12dp"/>
+            <!--  Total Amount Card  -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="#1565C0" android:padding="18dp" android:gravity="center_vertical" android:layout_marginBottom="20dp" android:elevation="2dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="R24,650" android:textSize="28sp" android:textStyle="bold" android:textColor="#FFFFFF" android:layout_marginEnd="10dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="This Month" android:textSize="14sp" android:textColor="#BBDEFB"/>
+            </LinearLayout>
+            <!--
+                            LINE CHART PLACEHOLDER
+                            Use MPAndroidChart:
+                              implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+                            Replace below with:
+                              <com.github.mikephil.charting.charts.LineChart ... />
+                         -->
+            <com.github.mikephil.charting.charts.LineChart android:id="@+id/lineChart" android:layout_width="match_parent" android:layout_height="200dp" android:background="#FFFFFF" android:layout_marginBottom="8dp" android:elevation="2dp"/>
+            <!--  Chart Legend  -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center" android:layout_marginBottom="20dp">
+                <View android:layout_width="24dp" android:layout_height="3dp" android:background="#1565C0" android:layout_marginEnd="6dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Income" android:textSize="13sp" android:textColor="#555555" android:layout_marginEnd="20dp"/>
+                <View android:layout_width="24dp" android:layout_height="3dp" android:background="#F44336" android:layout_marginEnd="6dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Expenses" android:textSize="13sp" android:textColor="#555555"/>
+            </LinearLayout>
+            <!--  Bottom Summary Cards Row  -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <!--  Top Categories Card  -->
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:background="#FFFFFF" android:padding="14dp" android:layout_marginEnd="8dp" android:elevation="2dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Top Categories" android:textSize="13sp" android:textStyle="bold" android:textColor="#1A1A1A" android:layout_marginBottom="10dp"/>
+                    <!--  Pizza row  -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="8dp">
+                        <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/ic_pizza" android:layout_marginEnd="6dp"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Pizza!" android:textSize="13sp" android:textColor="#333333"/>
+                        <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_trending_up"/>
+                    </LinearLayout>
+                    <!--  Bills row  -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                        <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/ic_bills" android:layout_marginEnd="6dp"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Bills" android:textSize="13sp" android:textColor="#333333"/>
+                        <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_trending_up"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!--  Monthly Trends Card  -->
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:background="#FFFFFF" android:padding="14dp" android:elevation="2dp" android:gravity="center_horizontal">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Monthly Trends" android:textSize="13sp" android:textStyle="bold" android:textColor="#1A1A1A"/>
+                        <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_trending_up"/>
+                    </LinearLayout>
+                    <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_arrow_up_green" android:layout_marginBottom="6dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="15%" android:textSize="22sp" android:textStyle="bold" android:textColor="#1A1A1A"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
