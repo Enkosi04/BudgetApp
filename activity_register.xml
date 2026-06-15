@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- Root layout: vertical LinearLayout used for the entire screen -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -8,6 +10,7 @@
     android:padding="16dp"
     tools:context=".Register">
 
+    <!-- Title text shown at the top of the screen -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,12 +20,14 @@
         android:gravity="center"
         android:text="Welcome Back" />
 
+    <!-- Subtitle text under the title -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:text="Sign in to continue" />
 
+    <!-- Username label -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,6 +37,7 @@
         android:layout_marginTop="12dp"
         android:text="Username" />
 
+    <!-- Username input field -->
     <EditText
         android:id="@+id/etUsername"
         android:layout_width="match_parent"
@@ -41,6 +47,7 @@
         android:focusable="true"
         android:focusableInTouchMode="true" />
 
+    <!-- Email label -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -50,6 +57,7 @@
         android:layout_marginTop="12dp"
         android:text="Email Address" />
 
+    <!-- Email input field -->
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
@@ -59,11 +67,13 @@
         android:focusable="true"
         android:focusableInTouchMode="true" />
 
+    <!-- Horizontal layout for Password label and Forgot Password link -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
+        <!-- Password label -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -73,6 +83,7 @@
             android:layout_marginTop="12dp"
             android:text="Password" />
 
+        <!-- Forgot Password link (UI only, not clickable logic here) -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -85,6 +96,7 @@
 
     </LinearLayout>
 
+    <!-- Password input field -->
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
@@ -94,16 +106,19 @@
         android:focusable="true"
         android:focusableInTouchMode="true" />
 
+    <!-- Remember Me section -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
+        <!-- Checkbox for remembering user -->
         <CheckBox
             android:id="@+id/cbRemember"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
+        <!-- Label for checkbox -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -116,6 +131,7 @@
 
     </LinearLayout>
 
+    <!-- Register button -->
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
@@ -124,6 +140,7 @@
         android:backgroundTint="#2196F3"
         android:textColor="#FFFFFF" />
 
+    <!-- Social media icons row -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -131,12 +148,14 @@
         android:gravity="center"
         android:layout_marginTop="20dp">
 
+        <!-- WhatsApp icon -->
         <ImageView
             android:id="@+id/imgWhatsapp"
             android:layout_width="65dp"
             android:layout_height="50dp"
             android:src="@drawable/whatsapp" />
 
+        <!-- Instagram icon -->
         <ImageView
             android:id="@+id/imgInstagram"
             android:layout_width="65dp"
@@ -144,6 +163,7 @@
             android:layout_marginStart="20dp"
             android:src="@drawable/instagram" />
 
+        <!-- Facebook icon -->
         <ImageView
             android:id="@+id/imgFacebook"
             android:layout_width="65dp"
