@@ -1,0 +1,44 @@
+package com.example.budgetapp
+
+import android.content.Intent
+import android.os.Bundle
+import android.os.Looper
+import android.os.Handler
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+
+// Splash screen activity shown when the app launches
+class Splash : AppCompatActivity() {
+
+    // Called when the activity is first created
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        // Enables edge-to-edge UI layout
+        enableEdgeToEdge()
+
+        // Set splash screen layout
+        setContentView(R.layout.activity_splash)
+
+        // Start delayed navigation to next screen
+        navigateAwayFromSplash()
+    }
+
+    // Handles timed navigation from splash screen to login screen
+    private fun navigateAwayFromSplash() {
+
+        // Delay execution on main thread
+        Handler(Looper.getMainLooper()).postDelayed({
+
+            // Create intent to move to Login screen
+            val intent = Intent(this, Login::class.java)
+
+            // Start Login activity
+            startActivity(intent)
+
+            // Close Splash screen so user cannot return to it
+            finish()
+
+        }, 3000) // 3000ms = 3 seconds delay
+    }
+}
